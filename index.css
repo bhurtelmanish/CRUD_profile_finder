@@ -1,0 +1,322 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.2s ease;
+    text-decoration: none !important;
+}
+
+:root{
+    --blueColor : #1DA1F2;
+    --blueColorHover : #1A8CD8;
+    --blackColor : #14171A;
+    --darkColor :#202327;
+    --grayColor: #AAB8C2;
+    --darkTextColor: #4A4C4E;
+}
+
+.wrapper , .overlay{
+    overflow-x: hidden;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 2rem;
+    width:100vw;
+
+}
+.wrapper{
+    background-color: var(--blackColor);
+    color:white;
+    position:  relative !important;
+}
+
+.overlay{
+    opacity: 0.7;
+    position: fixed !important;
+    top:0;
+    left:0;
+    display: none;
+    background-color: rgb(78, 78, 78);
+    /* background-color: red; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.upper-section {
+    display: flex;
+    width:100%;
+    padding:0 2rem;
+}
+.create-btn {
+    padding:0.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.delete-all-btn {
+    padding:0.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.search , .search-btn{
+    border:none;
+    outline:none;
+}
+.btn{
+    cursor: pointer;
+}
+.search{
+    height: 3rem;
+    width:70% !important;
+    padding: 0 1rem;
+    background-color: var(--darkColor);
+    font-size: 1rem;
+    color:white;
+    border-radius: 1.5rem;
+    margin: auto;
+}
+::-webkit-search-cancel-button{
+    display: none;
+}
+::placeholder{
+    color:#4A4C4E;
+}
+
+/* .search-btn{
+    height: 2.5rem;
+    width: 6rem;
+    cursor: pointer;
+} */
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    padding:2rem;
+    justify-content: center !important;
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+}
+
+.profile{
+    background-color: #212428;
+    color:white;
+    /* box-shadow: 0px 0px 30px ; */
+    height: fit-content;
+    display: flex;
+    /* flex-direction: column; */
+    gap:1.5rem;
+    min-width:20rem;
+    padding:1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+}
+.user-profile-content{
+    display: flex;
+    /* align-items: center; */
+    gap:1rem;
+    flex-direction: column;
+}
+
+.display-name , .display-email , .display-number{
+    font-weight: 600;
+    color:rgb(240, 240, 240);
+}
+.user-details-field{
+    color:rgb(205, 205, 205);
+}
+.add-new-profile{
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.form{
+    z-index: 3000;
+    background-color: var(--blackColor);
+    padding:2rem 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:1.4rem;
+    width:25rem;
+    border-radius: 8px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    box-shadow: 0px 0px 30px #24272c;
+}
+.input-name , .input-email , .input-phone{
+    height: 2.8rem;
+    width: 100%;
+    background-color: var(--darkColor);
+    padding: 0 0.7rem;
+    border-radius: 1.2rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color:white;
+}
+
+.btn{
+    background-color: var(--blueColor);
+    border:none;
+    outline: none;
+    border-radius: 1.3rem;
+    color:white;
+    font-size: 1rem;
+    /* padding: 0.7rem 1rem; */
+    height: 3rem;
+    width:11rem;
+}
+.btn:hover{
+    background-color: var(--blueColorHover);
+}
+
+.inactive{
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.cross {
+    font-weight: 700;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.form-upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-text{
+    color: var(--darkTextColor);
+}
+.btns-container{
+    /* background-color: red; */
+    /* width: 100vw; */
+    padding: 1rem 0 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 16rem;
+}
+.btns-upper-section {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.lower-section {
+    display: flex;
+    width:100vw;
+    gap:4rem;
+    justify-content: left;
+    /* background-color: red; */
+}
+.userProfileDescription {
+    background-color: var(--blackColor);
+    display: flex;
+    flex-direction: column;
+}
+
+.desc-upper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.delete-single-profile , .edit-single-profile{
+    height: 2.2rem;
+    width:7.8rem;
+    border:none;
+    outline:none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+.edit-single-profile{
+    background-color: white;
+    color:black;
+}
+.edit-single-profile:hover{
+    background-color: rgb(227, 227, 227);
+}
+.delete-single-profile{
+    background-color: rgb(234, 63, 134);
+    /* background-color: var(--blueColor); */
+    color:white;
+}
+.delete-single-profile:hover{
+    background-color: rgb(215, 53, 121);
+}
+
+.loader{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    /* background-color: rgb(0, 0, 0); */
+    /* position: absolute;
+    top:40%;
+    left:47%; */
+    /* display: none; */
+    border:13px solid var(--blueColor);
+    border-top-color: rgb(0, 141, 196);
+    animation: spin 1s infinite;
+    z-index: 5000;
+    display: none;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+  
+  input::file-selector-button {
+    font-weight: bold;
+    color: var(--darkTextColor);
+    padding: 0.5em;
+    border: none;
+    height: 2.5rem;
+    border-radius: 1rem;
+    width: 7rem;
+    background-color: var(--darkColor);
+    cursor: pointer;
+  }
+  
+
+.user-image-profile{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+}
+
+.profile-format{
+    display: flex;
+    gap:0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-xmark{
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+}
