@@ -78,11 +78,6 @@ html {
     width: var(--maxWidth);
 }
 
-.create-btn {
-    padding: 0.5rem;
-    cursor: pointer;
-}
-
 .search {
     border: none;
     outline: none;
@@ -220,10 +215,10 @@ html {
     display: flex;
     flex-direction: column;
 }
-.create-btn{
+/* .create-btn{
     height: 4rem;
     width: 4rem;
-}
+} */
 .delete-single-profile,
 .edit-single-profile {
     width: 2rem;
@@ -274,6 +269,52 @@ input::file-selector-button {
     font-size: 1rem;
     color: rgb(97, 97, 97);
 }
+.search{
+    border-radius: 1rem 2px 2px 1rem;
+}
+.upper-section{
+    gap:0 !important;
+}
+
+.create-btn{
+    height: 3rem;
+    width:7rem;
+    font-size: 0.95rem;
+    border: none;
+    outline: none;
+    border-radius: 2px 0.4rem 0.4rem 2px;
+    background-color: var(--blueColor);
+    color:white;
+    cursor: pointer;
+}
+.create-btn:hover{
+    background-color: var(--blueColorHover);
+}
+
+.edit-single-profile , .delete-single-profile{
+    height: 2rem;
+    padding: 0 1rem;
+    width: auto;
+    border:none;
+    outline:none;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.edit-single-profile{
+    background-color: white;
+    color:black;
+}
+.edit-single-profile:hover{
+    background-color: rgb(235, 235, 235);
+}
+.delete-single-profile{
+    background-color: rgb(227, 39, 117);
+    color: white;
+}
+.delete-single-profile:hover{
+    background-color: rgb(225, 73, 137);
+}
 
 @media (max-width: 1100px) {
     .container , .top-section , .upper-section{
@@ -306,6 +347,12 @@ input::file-selector-button {
         justify-content: start;
         align-items: start;
     }
+    .search , .create-btn{
+        height: 2.6rem;
+    }
+    .create-btn{
+        width: 6rem;
+    }
     .top-section > h1 {
         font-size: 2rem;
     }
@@ -313,7 +360,7 @@ input::file-selector-button {
         font-size: 0.9rem;
     }
     .container{
-        padding-top: 0 !important;
+        padding-top: 1rem !important;
     }
     .upper-section{
         gap:2px;
@@ -322,10 +369,6 @@ input::file-selector-button {
         align-items: center;
         justify-content: center !important;
         /* background-color: red; */
-    }
-    .create-btn{
-        height: 3.5rem;
-        width: 3.5rem;
     }
     .form{
         width: 21rem;
@@ -344,4 +387,11 @@ input::file-selector-button {
 .add-btn:hover{
     background-color: var(--blueColorHover);
 
+}
+
+@media (max-width: 400px) {
+    .edit-single-profile , .delete-single-profile{
+        padding: 0 0.5rem;
+        font-size: 0.8rem;
+    }
 }
