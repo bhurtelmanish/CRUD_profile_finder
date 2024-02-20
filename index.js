@@ -152,13 +152,12 @@ const searchFunction = (userArray) => {
                            <div class="user-details-field">Phone : <span class="display-number">${user.user_phone}</span></div>
                         </div>
                            <div class="profile-format">
-                           <button class="edit-single-profile" onclick="editUserProfile(${index}, '${escape(JSON.stringify(user))}')">Edit Profile</button>
-        
-        
-                             <button class="delete-single-profile" onclick="deleteUserProfile(${index})">Delete Profile</button>
+                             <img src="./icons/edit-user.png" class="edit-single-profile icon" onclick="editUserProfile(${index}, '${escape(JSON.stringify(user))}')">
+                             <img src="./icons/delete-user.png" class="delete-single-profile icon" onclick="deleteUserProfile(${index})">
                            </div>
                         </div>
                     </div>`;
+        
                 finalData += userProfile;
             });
             container.innerHTML = finalData;
@@ -202,8 +201,8 @@ const displayUser = () => {
                    <div class="user-details-field">Phone : <span class="display-number">${user.user_phone}</span></div>
                 </div>
                    <div class="profile-format">
-                   <button class="edit-single-profile" onclick="editUserProfile(${index}, '${escape(JSON.stringify(user))}')">Edit Profile</button>
-                     <button class="delete-single-profile" onclick="deleteUserProfile(${index})">Delete Profile</button>
+                     <img src="./icons/edit-user.png" class="edit-single-profile icon" onclick="editUserProfile(${index}, '${escape(JSON.stringify(user))}')">
+                     <img src="./icons/delete-user.png" class="delete-single-profile icon" onclick="deleteUserProfile(${index})">
                    </div>
                 </div>
             </div>`;
